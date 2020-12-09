@@ -4,21 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class ThirdActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Button btnStart;
+        Button ButtonFinishGame;
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btnStart = findViewById(R.id.btnStart);
-        btnStart.setOnClickListener(view -> {
-            Intent intent = new Intent(this,SecondActivity.class);
+        setContentView(R.layout.activity_third);
+        ButtonFinishGame = findViewById(R.id.FinishGame);
+        ButtonFinishGame.setOnClickListener(view ->{
+            Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
         });
     }
-}
+    }
